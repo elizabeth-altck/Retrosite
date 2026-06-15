@@ -1,126 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Internet Was Different</title>
+  <title>RETRO ENTRY</title>
 
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a1a2e, #000);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-/* лёгкий шум */
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-  opacity: 0.08;
-  pointer-events: none;
-}
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Press Start 2P', monospace;
+      color: white;
 
-.container {
-  text-align: center;
-  padding: 40px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(6px);
-}
+      background-image: url("forest.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-h1 {
-  font-size: 28px;
-  letter-spacing: 3px;
-}
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+    }
 
-p {
-  opacity: 0.7;
-}
+    .box {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px;
+      border: 2px solid white;
+      background: rgba(0,0,0,0.4);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
 
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  background: white;
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-}
+    h1 {
+      font-size: 26px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
 
-button:hover {
-  background: #ddd;
-}
+    p {
+      margin-top: 15px;
+      opacity: 0.85;
+      text-transform: uppercase;
+      font-size: 10px;
+      line-height: 1.8;
+    }
 
-/* бегущая строка */
-.marquee {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 14px;
-  opacity: 0.7;
-}
+    button {
+      margin-top: 25px;
+      padding: 15px 20px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
 
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll 12s linear infinite;
-}
+    button:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
 
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
+    /* 🔥 БЕГУЩАЯ СТРОКА */
+    .marquee {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 0;
+      overflow: hidden;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 3;
+    }
 
-/* кнопки музыки */
-.controls {
-  margin-top: 10px;
-}
-</style>
+    .marquee span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+      padding-left: 100%;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>INTERNET WAS DIFFERENT</h1>
-  <p>a place, not an algorithm</p>
+  <div class="overlay"></div>
 
-  <button onclick="toggleMusic()">play / pause music</button>
+  <div class="box">
 
-  <div class="controls">
-    <audio id="audio" loop autoplay>
-      <!-- сюда вставишь свою музыку -->
-      <source src="audio.mp3" type="audio/mpeg">
-    </audio>
+    <h1>WELCOME</h1>
+
+    <p>
+      ENTER THE SITE<br>
+      SYSTEM LOADING...<br>
+      DO NOT TRUST THE SIGNAL
+    </p>
+
+    <a href="main.html">
+      <button>ENTER</button>
+    </a>
+
   </div>
-</div>
 
-<div class="marquee">
-  <span>✦ welcome to your space ✦ no algorithms ✦ just vibe ✦ internet feels alive again ✦</span>
-</div>
-
-<script>
-const audio = document.getElementById("audio");
-let playing = true;
-
-function toggleMusic() {
-  if (playing) {
-    audio.pause();
-  } else {
-    audio.play();
-  }
-  playing = !playing;
-}
-</script>
+  <!-- 🔥 бегущая строка -->
+  <div class="marquee">
+    <span>WARNING • THIS IS A RETRO SYSTEM • ENTER AT YOUR OWN RISK • SIGNAL UNSTABLE • WELCOME TO THE ARCHIVE •</span>
+  </div>
 
 </body>
 </html>
