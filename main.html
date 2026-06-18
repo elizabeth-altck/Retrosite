@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MAIN WORLD</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      color: white;
+      background-image: url("forest_and_lake.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+      z-index: 1;
+    }
+
+    .layout {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    /* LEFT PANEL */
+    .left {
+      width: 20%;
+      font-size: 12px;
+    }
+
+    .navblock {
+      border: 1px solid white;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .navblock a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 6px 0;
+    }
+
+    /* CENTER */
+    .center {
+      width: 50%;
+      text-align: center;
+    }
+
+    .core {
+      border: 2px solid white;
+      padding: 25px;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .core h1 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 18px;
+    }
+
+    .core p {
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* RIGHT PANEL */
+    .right {
+      width: 25%;
+      font-size: 12px;
+    }
+
+    .panel {
+      border: 1px solid white;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: rgba(0,0,0,0.4);
+    }
+
+    button {
+      font-family: 'Share Tech Mono', monospace;
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="layout">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="navblock">
+      <b>NAVIGATION</b>
+      <a href="#">ENTER LOGS</a>
+      <a href="#">MEMORY FILES</a>
+      <a href="#">GALLERY</a>
+    </div>
+
+    <div class="navblock">
+      <b>UNKNOWN</b>
+      <a href="#">CORRUPTED LINK</a>
+      <a href="#">??? FILE</a>
+    </div>
+  </div>
+
+  <!-- CENTER -->
+  <div class="center">
+    <div class="core">
+      <h1>MAIN WORLD</h1>
+      <p>
+        YOU ARE INSIDE THE ARCHIVE SPACE.<br>
+        THIS IS A LIVING MEMORY SYSTEM.<br><br>
+        ВЫ НАХОДИТЕСЬ ВНУТРИ АРХИВА.<br>
+        ЭТО ЖИВАЯ СИСТЕМА ПАМЯТИ.
+      </p>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <div class="panel">
+      <b>MUSIC MODULE</b><br><br>
+      <button>PLAY / PAUSE</button>
+    </div>
+
+    <div class="panel">
+      <b>SYSTEM STATUS</b>
+      <p>ARCHIVE: ACTIVE<br>MEMORY SYNC: OK</p>
+    </div>
+
+    <div class="panel">
+      <b>QUICK SURVEY</b>
+      <p>What do you feel?</p>
+      <button>CALM</button>
+      <button>LOST</button>
+      <button>CURIOSITY</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
